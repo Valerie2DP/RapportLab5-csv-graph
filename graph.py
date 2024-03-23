@@ -46,7 +46,7 @@ def graphique(data,title):
 # graphique(df, 'Signal de sortie (canal 2) avec impulsion parasite (min ou max)') # ** C'est bon
 # graphique(df1, 'Signal de sortie wtf ?? pas sur que c\'est revelant') # **Affiche quelquechose de bizarre
 # graphique(df2, 'Signal de sortie (canal 2) sans impulsion parasite') # ** C'est bon
-# graphique(df3, 'Signal de soirte et d\'entrée (canal 1 et 2)\n utiliser pour calculer la vitesse de propagation') # ** weird car je veux 2 fig en un graphique
+# graphique(df3, 'Signal de soirte et d\'entrée (canal 1 et 2)\n utilisé pour calculer la vitesse de propagation') # ** weird car je veux 2 fig en un graphique
 # graphique(df4, 'Signal d\'entrée (canal 1) 2 impulsion ') # C'est bon?
 # graphique(df5, 'Signal d\'entrée (canal 1) utilisé pour calculer le coefficient de réflexion') # Meme graphique que df4 ??
 # graphique(df6, 'Signal d\'entrée (canal 1) court circuit du canal 2?') # C'est bon différent graphique!
