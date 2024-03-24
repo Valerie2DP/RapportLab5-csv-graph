@@ -50,7 +50,7 @@ def graphique(data,title):
 # graphique(df4, 'Signal d\'entrée (canal 1) 2 impulsion ') # C'est bon?
 # graphique(df5, 'Signal d\'entrée (canal 1) utilisé pour calculer le coefficient de réflexion') # Meme graphique que df4 ??
 # graphique(df6, 'Signal d\'entrée (canal 1) court circuit du canal 2?') # C'est bon différent graphique!
-# graphique(df7, 'Signal d\'entrée (canal 1) avec l\'adaptation d\'impédance \npour pas avoir de réflexion') # meme bug que le df3, 2 fig s'affiche
+graphique(df7, 'Signal d\'entrée (canal 1) avec l\'adaptation d\'impédance \npour pas avoir de réflexion') # meme bug que le df3, 2 fig s'affiche
 # graphique(df8, 'Signal a letape du circuit ouvert??') # meme bug que le df3 et df7 2 fig s'affiche
 # graphique(df9, 'allo') # même bug que le df3,df7 et df8.
 
