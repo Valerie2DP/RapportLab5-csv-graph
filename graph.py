@@ -23,20 +23,24 @@ df9 = pd.read_csv('scope_9.csv', header=[0,1])
 # faire une matrice, un array d deux dimension contenant ce qui faut pour le graphique
 
 def graphique(data,title):
-    if ('1','Volt') in data.columns :
+    if ('1','Volt') in data.columns and ('2','Volt') in data.columns:
+        m = data[[('x-axis','second'),('1','Volt'), ('2','Volt')]]
+        m.plot(x=('x-axis','second'),y=[('1','Volt'), ('2','Volt')])
+
+    elif ('1','Volt') in data.columns :
         m1 = data[[('x-axis','second'),('1','Volt')]]
         m1.plot(x=('x-axis','second'),y=('1','Volt'))
         # m1.plot(legend=None)
         
 
-    if  ('2','Volt') in data.columns :
+    elif ('2','Volt') in data.columns :
         m2 = data[[('x-axis','second'), ('2','Volt')]] # a cause qu'on a 2 ligne dans le "header"
         m2.plot(x=('x-axis','second'), y = ('2','Volt'))
         # m2.plot(legend=None)
     
 
 
-    plt.legend('',frameon=False)
+    plt.legend()
     plt.xlabel("Temps [s]")
     plt.ylabel("Tension [V]")
     plt.title(title)
@@ -46,7 +50,7 @@ def graphique(data,title):
 # graphique(df, 'Signal de sortie (canal 2) avec impulsion parasite (min ou max)') # ** C'est bon
 # graphique(df1, 'Signal de sortie wtf ?? pas sur que c\'est revelant') # **Affiche quelquechose de bizarre
 # graphique(df2, 'Signal de sortie (canal 2) sans impulsion parasite') # ** C'est bon
-# graphique(df3, 'Signal de soirte et d\'entrée (canal 1 et 2)\n utiliser pour calculer la vitesse de propagation') # ** weird car je veux 2 fig en un graphique
+# graphique(df3, 'Signal de soirte et d\'entrée (canal 1 et 2)\n utilisé pour calculer la vitesse de propagation') # ** weird car je veux 2 fig en un graphique
 # graphique(df4, 'Signal d\'entrée (canal 1) 2 impulsion ') # C'est bon?
 # graphique(df5, 'Signal d\'entrée (canal 1) utilisé pour calculer le coefficient de réflexion') # Meme graphique que df4 ??
 # graphique(df6, 'Signal d\'entrée (canal 1) court circuit du canal 2?') # C'est bon différent graphique!
